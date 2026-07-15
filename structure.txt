@@ -1,0 +1,47 @@
+🧠 Why This Is Important
+
+Instead of each service sending notifications directly:
+Order Service ─┐
+Payment Service├──► Email
+User Service ──┘
+
+Use a centralized notification service:
+Order Service
+      │
+Payment Service
+      │
+User Service
+      ▼
+Notification Service
+      │
+ ┌────┼────┐
+ ▼    ▼    ▼
+Email SMS Push
+
+Benefits:
+✅ Centralized notification management
+✅ Multiple delivery channels
+✅ Easier maintenance
+✅ Better scalability
+
+Used By :
+Amazon
+Uber
+Swiggy
+Zomato
+Banking Applications
+
+🛠 Tech Stack
+Python
+Flask
+Celery
+Redis
+
+📂 Project Structure
+notification-service/
+│
+├── app.py
+├── tasks.py
+├── requirements.txt
+├── docker-compose.yml
+└── README.md
