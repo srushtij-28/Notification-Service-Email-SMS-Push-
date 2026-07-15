@@ -22,3 +22,12 @@ A Flask microservice for sending Email, SMS, and Push notifications asynchronous
 ```bash
 pip install -r requirements.txt
 ```
+
+Start Redis
+docker compose up -d
+
+Start Celery Worker
+celery -A tasks worker --loglevel=info
+
+Run Flask
+python app.py
